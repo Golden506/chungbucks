@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+	<head>
+		<% stylesheet_link_tag "style.css", media: "all" %>
+		<link href="/assets/stylesheets/style.css" media="all" rel="stylesheet" />
+		<title>Chungbuck Transfer</title>
+	</head>
+	<body>
+		<h1>Chungbuck Transfer</h1>
+		<h2>There's no use keeping them around!</h2>
+
+		<%= form_for(@user) do |f| %>
+		<div class="field">
+			<h3>Your Username</h3>
+			<%= f.text_area :username %><br>
+			<h3>Your Password</h3>
+			<%= f.text area :password %>
+		</div>
+		<br>
+		<div class="field">
+			<h3>Target Username</h3>
+			<%= f.text_area :username %><br>
+			<h3>Target Password</h3>
+			<%= f.text_area :password %>
+		</div>
+		<div class="action">
+			<%= f.submit "Transfer" %>
+		</div>
+		<% end %>
+	</body>
+</HTML>

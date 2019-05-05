@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<HTML>
+	<head>
+		<% stylesheet_link_tag "style.css", media: "all" %>
+		<link href="/assets/stylesheets/style.css" media="all" rel="stylesheet" />
+		<title><Chungbucks</title>
+	</head>
+	<body>
+		<h1>Test Site:</h1>
+		<h2>The number 9 should be displayed directly below this header:</h2>
+		<p><%= 3 ** 2 %></p>
+		<h2>Some test accounts should be displayed directly below this header:</h2>
+		<% @accounts.each do |t|  %>
+			<div class="accountbox">
+			<strong>Username:</strong> <%= t.username  %> <br>
+			<br>
+			<strong>Value:</strong> <%=if t.value == nil; 0 else t.value end  %> <span>&#8373</span>h <br>
+			</div>
+		<% end  %>
+	</body>
+</HTML>

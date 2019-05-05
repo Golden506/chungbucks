@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+	<head>
+		<title>New ChungBuck Account</title>
+		<% stylesheet_link_tag "style.css", media: "all" %>
+                <link href="/assets/stylesheets/style.css" media="all" rel="stylesheet" />
+	</head>
+	<body>
+		<h1>Create A New Chungbuck Account</li>
+		<h2>We're happy to have you!</h2>
+
+		<%= form_for(@account) do |f| %>
+		<div class="field">
+			<h3>Username:</h3>
+			<%= f.text_area :username %><br>
+			<h3>Password:</h3>
+			<%= f.text_area :password %>
+		</div>
+		<div class="action">
+			<%= f.submit "Create" %>
+		</div>
+		<% end %>
+	</body>
+</HTML>
